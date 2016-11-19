@@ -98,6 +98,20 @@ GetData.prototype = {
 	extractDataSpeedRecordAverage: function (jqueryNode) {
 		this.data.speedRecordAverage = jqueryNode.find("div.table-responsive:nth-child(6) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2) > b:nth-child(1)").text();
 	}
+
+	mapData: function () {
+		$("#speedNd").text(parseFloat(this.data.speed).toFixed(2) + "/" + parseFloat(this.data.speedRecordAverage).toFixed(2))
+		$("#speedKmH").text(parseFloat(this.data.speed * 1.852).toFixed(2) + "/" + parseFloat(this.data.speedRecordAverage * 1.852).toFixed(2))
+		//$("#depart").text()
+		//$("#destination").text()
+		$("#size").text(this.data.size)
+		//$("#draught").text()
+		$("#latLong").text(this.data.lat + "/" + this.data.lon)
+		$("boatImg").src(this.data.img)
+		$("name").src(this.data.title)
+		$("country").src(this.data.country)
+		$("port").src(this.data.originalPort)
+	}
 };
 
 
