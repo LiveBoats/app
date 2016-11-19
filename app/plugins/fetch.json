@@ -6,5 +6,22 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-camera-preview": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/westonganger/cordova-plugin-camera-preview.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
