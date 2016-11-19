@@ -1,2 +1,34 @@
-.class
-	content: 'Hello world !'
+$text-color: #FFFFFF
+$margin-size: 5px
+$card-width: 30%
+
+body
+	background-color: #AAAAAA
+
+.mdl-card
+	width: $card-width
+	opacity: 0.5
+	background-color: #000080
+
+.mdl-card > .mdl-card__title
+	color: $text-color
+	height: 80px
+
+.right-card-wide > .mdl-card__title
+	background: url('../lets-get-naked.png') center / cover
+	height: 400px
+
+.mdl-card > .mdl-card__supporting-text
+	color: $text-color
+
+.left-card-wide,
+.right-card-wide
+	position: absolute
+	top: $margin-size
+
+
+.left-card-wide
+	left: $margin-size
+
+.right-card-wide
+	right: $margin-size

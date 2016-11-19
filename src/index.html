@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Live Boats</title>
+
+		<link rel="stylesheet" href="../node_modules/material-design-lite/material.min.css">
+		<script src="../node_modules/material-design-lite/material.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+		<link rel="stylesheet" href="./css/main.css">
+	</head>
+	<body>
+
+	<div class="left-card-wide mdl-card mdl-shadow--2dp">
+		<div class="mdl-card__title">
+			<h2 class="mdl-card__title-text">Informations sur le navire</h2>
+		</div>
+		<div class="mdl-card__supporting-text">
+			<p>Vitesse (nd) : <span id="speedNd">15.200004365189075</span> nd</p>
+			<p>Vitesse (km/h) : <span id="speedKmH">15.200004365189075 * 1.852</span> km/h</p>
+			<p>Direction (deg) : <span id="Direction">1.8325957145940461</span>°</p>
+			<p>Destination : <span id="destination">LE HAVRE</span></p>
+			<p>Date d'arrivée prévue : <span id="ETA">01-01-2017 10:00:00.0992</span></p>
+			<p>Longueur (m) : <span id="length">243</span> m</p>
+			<p>Largeur (m) : <span id="width">33</span> m</p>
+			<p>Tirant d'eau (m) : <span id="draught">9</span> m</p>
+		</div>
+	</div>
+
+	<div class="right-card-wide mdl-card mdl-shadow--2dp">
+		<div class="mdl-card__title">
+			<h2 class="mdl-card__title-text">GPS et identifiant</h2>
+		</div>
+		<div class="mdl-card__supporting-text">
+			<p>latitude/longitude : <span id="latLong">49°29'29' / 0°10'43'</span></p>
+			<p>callsign : <span id="callsign">FM3632</span></p>
+			<p>mmsi/omi : <span id="mmsiOmi">226003010 / 0</span></p>
+			<p>Derniere maj : <span id="dateMaj">18-11-2016 08:45:19.0000</span></p>
+		</div>
+	</div>
+
+	</body>
+</html>
