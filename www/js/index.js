@@ -45,6 +45,18 @@ var app = {
 			}
 		);
 
+		this.getSomeHtml()
+
+	},
+
+	getSomeHtml: function () {
+		$.ajax({
+			method: 'GET',
+			url: "http://http://www.marinevesseltraffic.com/",
+		})
+		.done(function( msg ) {
+			alert( "Data Saved: " + msg );
+		});
 	}
 };
 
