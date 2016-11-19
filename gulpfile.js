@@ -11,7 +11,7 @@ var defaultFilter = {
 };
 
 var defaultPath = {
-    css: 'src/css',
+    css: 'www/css',
     maps: './maps'
 };
 
