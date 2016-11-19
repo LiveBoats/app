@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "fr.liveboats.app"
+        },
+        "cordova-plugin-camera-preview": {
+            "PACKAGE_NAME": "fr.liveboats.app"
         }
     },
     "dependent_plugins": {}
