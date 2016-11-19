@@ -19,12 +19,12 @@
 -->
 <html>
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
-		<!-- build:css css/vendor.min -->
+		<!-- build:css css/vendor.min.css -->
 		<link rel="stylesheet" href="../node_modules/material-design-lite/material.min.css">
 		<!-- endbuild -->
 
@@ -69,13 +69,15 @@
 
 
 		<!-- build:js js/vendor.min.js -->
-		<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-		<script src="../node_modules/material-design-lite/material.min.js"></script>
+		<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="../node_modules/material-design-lite/material.min.js"></script>
 		<!-- endbuild -->
 
 		<!-- build:js js/app.min.js -->
+        <script tpye="text/javascript" src="js/getData.js"></script>
+		<script type="text/javascript" src="js/getBoats.js"></script>
+		<script type="text/javascript" src="js/area.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/area.js"></script>
 		<!-- endbuild -->
 
 		<script type="text/javascript" src="cordova.js"></script>
