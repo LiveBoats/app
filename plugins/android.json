@@ -12,7 +12,17 @@
         },
         "cordova-plugin-camera-preview": {
             "PACKAGE_NAME": "fr.liveboats.app"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "fr.liveboats.app"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "fr.liveboats.app"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "fr.liveboats.app"
+        }
+    }
 }

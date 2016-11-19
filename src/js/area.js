@@ -39,18 +39,21 @@ Area.prototype = {
 	 */
 	setUserPosition: function (lat, lon, angleFromNorthClockWise) {
 		this.position.user.lat = lat;
-		this.position.user.lon = lon;
+		this.position.user.lat = lon;
 		this.angle = angleFromNorthClockWise;
 
-		var myLeft = this.rotate(lat, lon, lat + this.lat30km, lon + this.lon30km, angleFromNorthClockWise);
+		this.compute();
+	},
+
+	compute: function () {
+
+		var myLeft = this.rotate(this.position.user.lat, this.position.user.lat, this.position.user.lat + this.lat30km, this.position.user.lat + this.lon30km, this.angle);
 		this.position.left.lat = myLeft.x;
 		this.position.left.lon = myLeft.y;
 
-		var myRight = this.rotate(lat, lon, lat + this.lat30km, lon - this.lon30km, angleFromNorthClockWise);
+		var myRight = this.rotate(this.position.user.lat, this.position.user.lat, this.position.user.lat + this.lat30km, this.position.user.lat - this.lon30km, this.angle);
 		this.position.right.lat = myRight.x;
 		this.position.right.lon = myRight.y;
-
-		console.log(this)
 	},
 
 	/**

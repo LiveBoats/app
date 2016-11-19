@@ -6,7 +6,7 @@ body {
 
 .mdl-card {
   width: 33%;
-  opacity: 0.5;
+  opacity: 0.8;
   background-color: #000080; }
 
 .mdl-card > .mdl-card__title {
@@ -14,7 +14,8 @@ body {
   height: 80px; }
 
 .mdl-card > .mdl-card__supporting-text {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  white-space: nowrap; }
 
 .left-card-wide,
 .right-card-wide {
