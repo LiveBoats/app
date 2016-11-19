@@ -13,9 +13,9 @@ GetBoats.prototype = {
 		var that = this;
 		$.get("http://10.16.1.15:8042/tracks.kml", function (responseData) {
 			var myXmlDom = $.parseXML( responseData );
-			var myBoats = myXmlDom.find("description").each(function() {
+			var myBoats = $(myXmlDom).find("description").each(function() {
 				//Get boat configuration
-				var myId = $(this).text().replace(/.*mmsi=(\d+)&.*/, "$1");
+				var myId = $(this).text().replace(/.*mmsi=(\d+).*/, "$1");
 
 				var myFind = false;
 				for (var i = 0; i < that.boats.length; i++) {
@@ -26,17 +26,17 @@ GetBoats.prototype = {
 				}
 
 				if( ! myFind ) {
-					that.boats.push( that.generateBoats(myId) )
+					that.boats.push( that.generateBoats(myId) );
 				}
 
 				//Get coordinates
 				var myCoordinates = $(this).parent().find("coordinates").text().split(",");
-				var mySpeed = parseFloat($(this).parent().find('[name="Speed"]').find('value').text())
+				var mySpeed = parseFloat($(this).parent().find('[name="Speed"]').find('value').text());
 				for (i = 0; i < that.boats.length; i++) {
 					if( that.boats[i].id == myId) {
-						that.boats[i].data.lat = myCoordinates[0];
-						that.boats[i].data.lon = myCoordinates[1];
-						that.boats[i].data.speed = mySpeed;
+						that.boats[i].data.data.lat = myCoordinates[0];
+						that.boats[i].data.data.lon = myCoordinates[1];
+						that.boats[i].data.data.speed = mySpeed;
 						break;
 					}
 				}
@@ -45,15 +45,19 @@ GetBoats.prototype = {
 	},
 
 	generateBoats: function (boatId) {
+
+		var myData = new GetData(boatId);
+		myData.getData();
+
 		return {
 			id : boatId,
-			data: new GetData(boatId).getData()
+			data: myData
 		}
 	},
 
 	initInterval: function () {
 		var that = this;
-		this.interval = setInterval(that.downloadFile, 30 * 1000);
+		this.interval = setInterval(function() {that.downloadFile()}, 30 * 1000);
 	},
 
 	init: function () {
