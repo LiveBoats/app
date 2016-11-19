@@ -1,4 +1,31 @@
-.class {
-  content: 'Hello world !'; }
+body {
+  background-color: #AAAAAA; }
+
+.mdl-card {
+  width: 30%;
+  opacity: 0.5;
+  background-color: #000080; }
+
+.mdl-card > .mdl-card__title {
+  color: #FFFFFF;
+  height: 80px; }
+
+.right-card-wide > .mdl-card__title {
+  background: url("../lets-get-naked.png") center/cover;
+  height: 400px; }
+
+.mdl-card > .mdl-card__supporting-text {
+  color: #FFFFFF; }
+
+.left-card-wide,
+.right-card-wide {
+  position: absolute;
+  top: 5px; }
+
+.left-card-wide {
+  left: 5px; }
+
+.right-card-wide {
+  right: 5px; }
 
 /*# sourceMappingURL=maps/main.css.map */
