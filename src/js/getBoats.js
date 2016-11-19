@@ -12,7 +12,7 @@ GetBoats.prototype = {
 	downloadFile: function () {
 		var that = this;
 		$.get("http://10.16.1.15:8042/tracks.kml", function (responseData) {
-			var myXmlDom = $.parseXML( responseData )
+			var myXmlDom = $.parseXML( responseData );
 			var myBoats = myXmlDom.find("description").each(function() {
 				//Get boat configuration
 				var myId = $(this).text().replace(/.*mmsi=(\d+)&.*/, "$1");

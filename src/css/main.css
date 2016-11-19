@@ -14,7 +14,8 @@ body {
   height: 80px; }
 
 .mdl-card > .mdl-card__supporting-text {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  white-space: nowrap; }
 
 .left-card-wide,
 .right-card-wide {
