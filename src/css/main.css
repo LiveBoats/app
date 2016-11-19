@@ -7,12 +7,7 @@ body {
   background-color: #000080; }
 
 .mdl-card > .mdl-card__title {
-  color: #FFFFFF;
-  height: 80px; }
-
-.right-card-wide > .mdl-card__title {
-  background: url("../lets-get-naked.png") center/cover;
-  height: 400px; }
+  color: #FFFFFF; }
 
 .mdl-card > .mdl-card__supporting-text {
   color: #FFFFFF; }
@@ -27,5 +22,15 @@ body {
 
 .right-card-wide {
   right: 5px; }
+
+p {
+  line-height: 0.2; }
+
+img {
+  opacity: 0.7;
+  width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }
 
 /*# sourceMappingURL=maps/main.css.map */
