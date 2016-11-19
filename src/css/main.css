@@ -5,7 +5,7 @@ body {
   background-color: transparent; }
 
 .mdl-card {
-  width: 150px;
+  width: 30%;
   opacity: 0.5;
   background-color: #000080; }
 
@@ -13,12 +13,9 @@ body {
   color: #FFFFFF;
   height: 80px; }
 
-.right-card-wide > .mdl-card__title {
-  background: url("../img/lets-get-naked.png") center/cover;
-  height: 400px; }
-
 .mdl-card > .mdl-card__supporting-text {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  white-space: nowrap; }
 
 .left-card-wide,
 .right-card-wide {
