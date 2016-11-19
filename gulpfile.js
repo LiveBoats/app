@@ -4,15 +4,18 @@ var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var gutil = require('gulp-util');
+var useref = require('gulp-useref');
 
 
 var defaultFilter = {
-    sass: ['src/sass/**/*.+(sass|scss)']
+    sass: ['src/sass/**/*.+(sass|scss)'],
+	html: ['src/index.html']
 };
 
 var defaultPath = {
-    css: 'www/css',
-    maps: './maps'
+    css: 'src/css',
+    maps: './maps',
+	dist: 'www'
 };
 
 var onError = {
@@ -34,4 +37,11 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function(){
     gulp.watch(defaultFilter.sass, ['sass']).on('change', gutil.log);
+});
+
+gulp.task('dist', ['sass'], function () {
+	return gulp.src(defaultFilter.html)
+		.pipe(useref())
+		.pipe(gulp.dest(defaultPath.dist));
+
 });

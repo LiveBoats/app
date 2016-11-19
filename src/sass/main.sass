@@ -1,6 +1,6 @@
 $text-color: #FFFFFF
 $margin-size: 5px
-$card-width: 30%
+$card-width: 150px
 
 body
 	background-color: #AAAAAA
@@ -15,7 +15,7 @@ body
 	height: 80px
 
 .right-card-wide > .mdl-card__title
-	background: url('../lets-get-naked.png') center / cover
+	background: url('../img/lets-get-naked.png') center / cover
 	height: 400px
 
 .mdl-card > .mdl-card__supporting-text
@@ -32,3 +32,20 @@ body
 
 .right-card-wide
 	right: $margin-size
+
+*
+	-webkit-tap-highlight-color: rgba(0,0,0,0) /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+
+body
+	-webkit-touch-callout: none             /* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none          /* prevent webkit from resizing text to fit */
+	-webkit-user-select: none               /* prevent copy paste, to allow, change 'none' to 'text' */
+	background-color: transparent
+
+h1
+	font-size: 24px
+	font-weight: normal
+	margin: 0
+	overflow: visible
+	padding: 0
+	text-align: center

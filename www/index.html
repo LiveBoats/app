@@ -19,30 +19,54 @@
 -->
 <html>
     <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+		<link rel="stylesheet" href="css/styles.min.css">
+
+		<link rel="stylesheet" href="css/vendor.min">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <title>Hello World</title>
     </head>
     <body>
-		<div class="fullscreen">
-			<h1>Hello World !</h1>
-			<img id="cameraView" src="">
-		</div>
+		<!--<div class="fullscreen">-->
+			<div class="left-card-wide mdl-card mdl-shadow--2dp">
+				<div class="mdl-card__title">
+					<h2 class="mdl-card__title-text">Informations sur le navire</h2>
+				</div>
+				<div class="mdl-card__supporting-text">
+					<p>Vitesse (nd) : <span id="speedNd">15.200004365189075</span> nd</p>
+					<p>Vitesse (km/h) : <span id="speedKmH">15.200004365189075 * 1.852</span> km/h</p>
+					<p>Direction (deg) : <span id="Direction">1.8325957145940461</span>°</p>
+					<p>Destination : <span id="destination">LE HAVRE</span></p>
+					<p>Date d'arrivée prévue : <span id="ETA">01-01-2017 10:00:00.0992</span></p>
+					<p>Longueur (m) : <span id="length">243</span> m</p>
+					<p>Largeur (m) : <span id="width">33</span> m</p>
+					<p>Tirant d'eau (m) : <span id="draught">9</span> m</p>
+				</div>
+			</div>
 
-		<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+			<div class="right-card-wide mdl-card mdl-shadow--2dp">
+				<div class="mdl-card__title">
+					<h2 class="mdl-card__title-text">GPS et identifiant</h2>
+				</div>
+				<div class="mdl-card__supporting-text">
+					<p>latitude/longitude : <span id="latLong">49°29'29' / 0°10'43'</span></p>
+					<p>callsign : <span id="callsign">FM3632</span></p>
+					<p>mmsi/omi : <span id="mmsiOmi">226003010 / 0</span></p>
+					<p>Derniere maj : <span id="dateMaj">18-11-2016 08:45:19.0000</span></p>
+				</div>
+			</div>
+		<!--</div>-->
+
+
+		<script src="js/vendor.min.js"></script>
+
+		<script src="js/app.min.js"></script>
+
+		<script type="text/javascript" src="cordova.js"></script>
     </body>
 </html>
