@@ -2,7 +2,7 @@ body {
   background-color: #AAAAAA; }
 
 .mdl-card {
-  width: 30%;
+  width: 33%;
   opacity: 0.5;
   background-color: #000080; }
 
@@ -11,7 +11,7 @@ body {
   height: 80px; }
 
 .right-card-wide > .mdl-card__title {
-  background: url("../lets-get-naked.png") center/cover;
+  background: url("../img/lets-get-naked.png") center/cover;
   height: 400px; }
 
 .mdl-card > .mdl-card__supporting-text {
@@ -27,5 +27,22 @@ body {
 
 .right-card-wide {
   right: 5px; }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-user-select: none;
+  background-color: transparent; }
+
+h1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  text-align: center; }
 
 /*# sourceMappingURL=maps/main.css.map */
