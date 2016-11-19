@@ -1,8 +1,11 @@
 body {
-  background-color: #AAAAAA; }
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-user-select: none;
+  background-color: transparent; }
 
 .mdl-card {
-  width: 33%;
+  width: 150px;
   opacity: 0.5;
   background-color: #000080; }
 
@@ -31,12 +34,6 @@ body {
 * {
   -webkit-tap-highlight-color: transparent; }
 
-body {
-  -webkit-touch-callout: none;
-  -webkit-text-size-adjust: none;
-  -webkit-user-select: none;
-  background-color: transparent; }
-
 h1 {
   font-size: 24px;
   font-weight: normal;
@@ -44,5 +41,15 @@ h1 {
   overflow: visible;
   padding: 0;
   text-align: center; }
+
+p {
+  line-height: 0.2; }
+
+img {
+  opacity: 0.7;
+  width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }
 
 /*# sourceMappingURL=maps/main.css.map */
