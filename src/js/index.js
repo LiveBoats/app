@@ -16,8 +16,19 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-window.location.protocol = 'http:';
-var area = new Area();
+// window.location.protocol = 'http:';
+// var area = new Area();
+
+var mockData =  function () {
+
+	$('.right-card-wide').removeClass('not-here');
+	$('.left-card-wide').removeClass('not-here');
+	$('.right-card-wide').addClass('appear');
+	$('.left-card-wide').addClass('appear');
+	console.log('YOOO');
+
+	return
+};
 
 var app = {
 
@@ -49,17 +60,23 @@ var app = {
 			}
 		);
 
-		this.initializeBoatData()
+		setTimeout(function () {
+				this.mockData()
+			},
+			10000
+		);
+
+		//this.initializeBoatData()
 	},
 
 	initializeBoatData: function() {
-    	this.getBoats();
+    	//this.getBoats();
 	},
 
 	getBoats: function () {
-		new GetBoats().init();
+		//new GetBoats().init();
 
-		this.retrieveSensorData();
+		//this.retrieveSensorData();
 	},
 
 	retrieveSensorData: function () {

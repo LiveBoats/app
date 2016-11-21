@@ -28,6 +28,14 @@ body {
 .right-card-wide {
   right: 5px; }
 
+.not-here {
+  opacity: 0;
+  -webkit-transition: opacity ease-out 300ms;
+  transition: opacity ease-out 300ms; }
+
+.appear {
+  opacity: 1; }
+
 * {
   -webkit-tap-highlight-color: transparent; }
 
